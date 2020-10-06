@@ -2,6 +2,7 @@ import React from "react";
 import { FormControl, FormHelperText, InputLabel, Select, TextField } from "@material-ui/core";
 import { makeStyles, createStyles } from "@material-ui/core/styles";
 
+// TODO change styles dynamically depending on screen size
 const useStyles = makeStyles(() =>
   createStyles({
     root: {
@@ -9,15 +10,18 @@ const useStyles = makeStyles(() =>
       display: "flex",
       flexDirection: 'column'
     },
+    mobile: {
+      margin: "4rem"
+    }
   })
 );
 
 export const AddItem = () => {
   const classes = useStyles();
   return (
-    <form className={classes.root} noValidate autoComplete="off">
+    <form className={classes.mobile} noValidate autoComplete="off">
       <TextField id="standard-basic" label="Item Name"/>
-      <FormControl required className={classes.root}>
+      <FormControl required className={classes.mobile}>
         <InputLabel htmlFor="outlined-age-native-required">Category</InputLabel>
         {/*  TODO change the state values for the select */}
         <Select 
@@ -29,7 +33,7 @@ export const AddItem = () => {
             id: 'outlined-age-native-required',
           }}
         >
-          <option aria-label="None" defaultValue="">Other</option>
+          <option aria-label="None" value="">Other</option>
           <option value={"Bills & Utilities"}>Bills & Utilities</option>
           <option value={"Cash Withdawn"}>Cash Withdawn</option>
           <option value={"Shopping"}>Shopping</option>
