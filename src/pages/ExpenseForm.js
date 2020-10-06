@@ -4,7 +4,7 @@ import { Category } from "../components/category/Category";
 import { Price } from "../components/price/Price";
 import { DatePurchased } from "../components/datePurchased/DatePurchased";
 import { SubmitButton } from "../components/submitButton/SubmitButton";
-
+import {Link} from 'react-router'
 export const ExpenseForm = () => {
   return (
     <>
@@ -12,6 +12,9 @@ export const ExpenseForm = () => {
       <Category />
       <Price />
       <DatePurchased />
+      <Link to="/budget-report">
+        <SubmitButton/>
+      </Link>
       <SubmitButton />
     </>
   );
