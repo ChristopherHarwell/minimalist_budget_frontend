@@ -10,7 +10,7 @@ function App() {
       <Route path="/">
         <ExpenseForm />
       </Route>
-      <Route path="/budget-form">
+      <Route path="/budget-report">
         <BudgetReport />
       </Route>
     </div>
