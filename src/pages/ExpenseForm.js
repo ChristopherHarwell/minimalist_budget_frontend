@@ -5,7 +5,7 @@ import { Price } from "../components/price/Price";
 import { DatePurchased } from "../components/datePurchased/DatePurchased";
 import { SubmitButton } from "../components/submitButton/SubmitButton";
 
-export const ItemForm = () => {
+export const ExpenseForm = () => {
   return (
     <>
       <AddItem />

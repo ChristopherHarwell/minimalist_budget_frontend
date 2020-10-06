@@ -1,11 +1,18 @@
 import React from "react";
+import { Route } from "react-router";
 import "./App.css";
-import { ItemForm } from "./pages/ItemForm";
+import { BudgetReport } from "./pages/BudgetReport";
+import { ExpenseForm } from "./pages/ExpenseForm";
 
 function App() {
   return (
     <div className="App">
-      <ItemForm />
+      <Route path="/">
+        <ExpenseForm />
+      </Route>
+      <Route path="/budget-form">
+        <BudgetReport />
+      </Route>
     </div>
   );
 }
