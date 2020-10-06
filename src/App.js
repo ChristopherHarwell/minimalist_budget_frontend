@@ -1,12 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { AddItem } from './components/addItem/addItem';
+import React from "react";
+import "./App.css";
+import { ItemForm } from "./pages/ItemForm";
 
 function App() {
   return (
     <div className="App">
-      <AddItem/>
+      <ItemForm />
     </div>
   );
 }

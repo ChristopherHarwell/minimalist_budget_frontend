@@ -1,39 +1,46 @@
 import React from "react";
-import { FormControl, FormHelperText, InputLabel, Select, TextField } from "@material-ui/core";
+import {
+  FormControl,
+  FormHelperText,
+  InputLabel,
+  Select,
+  TextField,
+} from "@material-ui/core";
 import { makeStyles, createStyles } from "@material-ui/core/styles";
 
 // TODO change styles dynamically depending on screen size
 const useStyles = makeStyles(() =>
   createStyles({
     root: {
-      marginTop: "4rem",
+      marginTop: "1rem",
       display: "flex",
-      flexDirection: 'column'
+      flexDirection: "column",
+      marginLeft: '1rem',
+      marginRight: '1rem'
     },
     mobile: {
-      margin: "4rem"
-    }
+      margin: "4rem",
+    },
   })
 );
 
-export const AddItem = () => {
+export const Category = () => {
   const classes = useStyles();
   return (
-    <form className={classes.mobile} noValidate autoComplete="off">
-      <TextField id="standard-basic" label="Item Name"/>
-      <FormControl required className={classes.mobile}>
+    <form className={classes.root} noValidate autoComplete="off">
+      <FormControl required className={classes.root}>
         <InputLabel htmlFor="outlined-age-native-required">Category</InputLabel>
         {/*  TODO change the state values for the select */}
-        <Select 
+        <Select
           native
-        //   value={state.age}
-        //   onChange={handleChange}
+          //   value={state.age}
+          //   onChange={handleChange}
           name="category"
           inputProps={{
-            id: 'outlined-age-native-required',
+            id: "outlined-age-native-required",
           }}
         >
-          <option aria-label="None" value="">Other</option>
+          <option aria-label="None" value="" />
           <option value={"Bills & Utilities"}>Bills & Utilities</option>
           <option value={"Cash Withdawn"}>Cash Withdawn</option>
           <option value={"Shopping"}>Shopping</option>
