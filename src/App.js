@@ -1,8 +1,8 @@
 import React from "react";
 import { Route } from "react-router";
 import "./App.css";
-import { BudgetReport } from "./pages/BudgetReport";
-import { ExpenseForm } from "./pages/ExpenseForm";
+import { BudgetReport } from "./pages/budgetReport/BudgetReport";
+import { ExpenseForm } from "./pages/expenseForm/ExpenseForm";
 
 function App() {
   return (
