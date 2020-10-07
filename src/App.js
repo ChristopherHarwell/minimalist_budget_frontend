@@ -7,10 +7,10 @@ import { ExpenseForm } from "./pages/ExpenseForm";
 function App() {
   return (
     <div className="App">
-      <Route path="/">
+      <Route exact path="/">
         <ExpenseForm />
       </Route>
-      <Route path="/budget-report">
+      <Route exact path="/budget-report">
         <BudgetReport />
       </Route>
     </div>
