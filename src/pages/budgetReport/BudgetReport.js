@@ -1,6 +1,6 @@
 import React from "react";
-import { IncomingFinances } from "../components/incomingFinances/IncomingFinances";
-import { OutgoingExpenses } from "../components/outgoingExpenses/OutgoingExpenses";
+import { IncomingFinances } from "../../components/incomingFinances/IncomingFinances";
+import { OutgoingExpenses } from "../../components/outgoingExpenses/OutgoingExpenses";
 import { Link } from "react-router-dom";
 
 export const BudgetReport = () => {
