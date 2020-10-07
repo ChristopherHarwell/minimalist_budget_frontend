@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export const BudgetReport = () => {
   return (
     <>
-    {/* Add react vis XY Plot */}
+    {/* TODO Add react vis XY Plot */}
       <Link to="/budget-report">
         <IncomingFinances />
         <OutgoingExpenses />
