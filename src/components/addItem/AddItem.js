@@ -22,7 +22,7 @@ export const AddItem = () => {
   const classes = useStyles();
   return (
     <form className={classes.root} noValidate autoComplete="off">
-      <TextField id="standard-basic" label="Item Name"/>
+      <TextField id="standard-basic" label="Item Name" placeholder=""/>
     </form>
   );
 };
