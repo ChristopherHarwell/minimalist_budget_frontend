@@ -10,6 +10,6 @@ server.use(helmet());
 server.use(cors());
 server.use(express.json());
 
- server.use("/api/budget", BudgetRouter);
+server.use("/api/budget", BudgetRouter);
 
 module.exports = server;
