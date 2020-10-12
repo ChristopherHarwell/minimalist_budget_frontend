@@ -6,3 +6,7 @@ module.exports = {
     findBy,
     findById,
   };
+
+  function add() {
+    return db("budget");
+  };
