@@ -8,7 +8,7 @@ export const getBudget= () => dispatch => {
   // the dispatch function is the thunk
   dispatch({ type: FETCH_BUDGET_START });  // change this to your action
   axios
-    .get("")
+    .get("https://minimalist-budget1.herokuapp.com/")
     .then(res => {
       /* whatever you want to do with the response */
       dispatch({ type: FETCH_BUDGET_SUCCESS,  // change this to your action

@@ -1,16 +1,23 @@
 import ReactDOM from "react-dom";
 import React from "react";
-import { createStore, applyMiddleware } from "redux";
+import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
-import rootReducer from "./reducers";
+import reducer from "./state/reducers";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+import { BrowserRouter as Router } from "react-router-dom";
+import { applyMiddleware } from "redux";
 
-const store = createStore(rootReducer, applyMiddleware(thunk));
+// const store = createStore(rootReducer, applyMiddleware(thunk));
+
+const store = configureStore({
+  reducer,
+  middleware: [thunk],
+});
 
 ReactDOM.render(
-  <Provider>
+  <Provider store={store}>
     <Router>
       <App />
     </Router>
