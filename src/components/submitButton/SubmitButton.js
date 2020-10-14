@@ -1,6 +1,7 @@
 import { Button, createStyles, makeStyles } from "@material-ui/core";
 import React from "react";
-import { getBudget } from "../../state/actions/index";
+import { connect } from "react-redux";
+import { Link, useHistory } from "react-router-dom";
 const useStyles = makeStyles(() =>
   createStyles({
     root: {
@@ -16,25 +17,18 @@ const useStyles = makeStyles(() =>
   })
 );
 
-
-
 export const SubmitButton = (props) => {
-
-  const fetchBudget = (event) => {
-    event.preventDefault();
-    props.getBudget();
-  };
-
   const classes = useStyles();
   return (
-    <Button onClick={fetchBudget} className={classes.root} variant="contained" color="primary">
-      Submit
-    </Button>
+    <Link to="/budget-report">
+      <Button
+        onClick={props.getBudget}
+        className={classes.root}
+        variant="contained"
+        color="primary"
+      >
+        Submit
+      </Button>
+    </Link>
   );
-};
-
-const mapStateToProps = (state) => {
-  return {
-    storeProps: state.getBudget,
-  };
 };

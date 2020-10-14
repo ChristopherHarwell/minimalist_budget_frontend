@@ -5,25 +5,29 @@ import "./App.css";
 import { BudgetReport } from "./pages/budgetReport/BudgetReport";
 import { ExpenseForm } from "./pages/expenseForm/ExpenseForm";
 import { getBudget } from "./state/actions";
+import { useHistory, Link } from "react-router-dom";
+import { SubmitButton } from "./components/submitButton/SubmitButton";
 
 function App(props) {
-  const fetchBudget = (event) => {
-    event.preventDefault();
-    props.getBudget();
-  };
+  const { push } = useHistory();
+
+  // const fetchBudget = (event) => {
+  //   console.log(props.storeProps);
+  //   event.preventDefault();
+  //   props.getBudget();
+  //   push("/budget-report");
+  // };
 
   return (
     <div className="App">
       <Route exact path="/">
         <ExpenseForm />
+
+        <SubmitButton getBudget={props.getBudget} />
       </Route>
       <Route exact path="/budget-report">
         <BudgetReport
-          name={props.storeProps.name}
-          item_name={props.storeProps.item_name}
-          category={props.storeProps.category}
-          purchase_date={props.storeProps.purchase_date}
-          item_price={props.storeProps.item_price}
+          budget={props.storeProps}
         />
       </Route>
     </div>
@@ -35,5 +39,6 @@ const mapStateToProps = (state) => {
     storeProps: state.budget,
   };
 };
+
 //change addAction to the action name
 export default connect(mapStateToProps, { getBudget })(App);

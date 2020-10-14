@@ -13,9 +13,9 @@ export const ExpenseForm = () => {
       <Category />
       <Price />
       <DatePurchased />
-      <Link to="/budget-report">
+      {/* <Link to="/budget-report">
         <SubmitButton/>
-      </Link>
+      </Link> */}
     </>
   );
 };

@@ -10,6 +10,7 @@ export const getBudget= () => dispatch => {
   axios
     .get("https://minimalist-budget1.herokuapp.com/")
     .then(res => {
+      console.log("Res.data: ", res.data);
       /* whatever you want to do with the response */
       dispatch({ type: FETCH_BUDGET_SUCCESS,  // change this to your action
         payload: res.data }); // add the rest of the payload after res.data like res.data.results

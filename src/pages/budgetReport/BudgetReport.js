@@ -6,37 +6,31 @@ import { Card, CardContent, Typography } from "@material-ui/core";
 
 export const BudgetReport = (props) => {
   return (
-    <>
+    <Card>
       {/* TODO Add react vis XY Plot */}
       {/* <Link to="/budget-report">
         <IncomingFinances />
         <OutgoingExpenses />
       </Link> */}
-      <Card>
-        <CardContent>
-          <Typography id="standard-basic" label={props.name} />
-          <Typography
-            id="standard-basic"
-            label="Outgoing Expenses"
-            value={props.item_name}
-          />
-          <Typography
-            id="standard-basic"
-            label="Outgoing Expenses"
-            value={props.category}
-          />
-          <Typography
-            id="standard-basic"
-            label="Outgoing Expenses"
-            value={props.purchase_date}
-          />
-          <Typography
-            id="standard-basic"
-            label="Outgoing Expenses"
-            value={props.item_price}
-          />
+      {props.budget.map((items) => (
+       
+          <CardContent>
+            <Typography id="standard-basic" label={items.name} />
+            <Typography id="standard-basic" label="Outgoing Expenses">
+              {items.item_name}
+            </Typography>
+            <Typography id="standard-basic" label="Outgoing Expenses">
+              {items.category}
+            </Typography>
+            <Typography id="standard-basic" label="Outgoing Expenses">
+              {items.purchase_date}
+            </Typography>
+            <Typography id="standard-basic" label="Outgoing Expenses">
+              {items.item_price}
+            </Typography>
           </CardContent>
-        </Card>
-    </>
+       
+      ))}
+    </Card>
   );
 };
