@@ -15,18 +15,18 @@ export const BudgetReport = (props) => {
       {props.budget.map((items) => (
        
           <CardContent>
-            <Typography id="standard-basic" label={items.name} />
+            <Typography id="standard-basic" label={"purchaser: ", items.name} />
             <Typography id="standard-basic" label="Outgoing Expenses">
-              {items.item_name}
+              {"item name: ", items.item_name}
             </Typography>
             <Typography id="standard-basic" label="Outgoing Expenses">
-              {items.category}
+              {"category: ", items.category}
             </Typography>
             <Typography id="standard-basic" label="Outgoing Expenses">
-              {items.purchase_date}
+              {"purchase date: ", items.purchase_date}
             </Typography>
             <Typography id="standard-basic" label="Outgoing Expenses">
-              {items.item_price}
+              {"price: ", "$" + items.item_price}
             </Typography>
           </CardContent>
        
