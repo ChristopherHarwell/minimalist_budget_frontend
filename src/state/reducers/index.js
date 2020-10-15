@@ -5,14 +5,7 @@ import {
 } from "../actions";
 
 const initialState = {
-  budget: [
-    {
-      item_name: "",
-      category: "",
-      purchase_date: "",
-      item_price: "",
-    },
-  ], // change this property to your initial state and value for that state
+  budget: [], // change this property to your initial state and value for that state
   error: "",
   isFetching: false,
 };
